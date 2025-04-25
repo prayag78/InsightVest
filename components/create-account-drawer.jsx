@@ -26,7 +26,7 @@ const CreateAccountDrawer = ({children}) => {
 
         </form>
       </div>
-    </DrawerContent>
+    </DrawerContent >
   </Drawer>
   
   )
