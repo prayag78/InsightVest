@@ -27,7 +27,7 @@ model User {
   createdAt     DateTime      @default(now())
   updatedAt     DateTime      @updatedAt
 
-  @@map("users")
+  @@map("users")   // the name is stored as "users" in the database
 }
 
 model Account {

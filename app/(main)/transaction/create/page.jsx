@@ -1,7 +1,9 @@
 import React from 'react'
 
-export const page = () => {
+const TransactionPage = () => {
   return (
-    <div>page</div>
+    <div>TransactionPage</div>
   )
 }
+
+export default TransactionPage
