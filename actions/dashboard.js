@@ -1,6 +1,6 @@
 "use server";
 
-import { auth } from "@clerk/nextjs/dist/types/server";
+import { auth } from "@clerk/nextjs/server";
 import { db } from "@/lib/prisma";
 import { revalidatePath } from "next/cache";
 
@@ -36,7 +36,7 @@ export async function createAccount(data) {
       throw new Error("Invalid balance value");
     }
 
-    const existingAccounts = await db.account.findmany({
+    const existingAccounts = await db.account.findMany({
       where: {
         userId: user.id,
       },
@@ -73,5 +73,41 @@ export async function createAccount(data) {
     return { success: true, data: serializedAccount };
   } catch (error) {
     console.error("Error creating account:", error);
+  }
+}
+
+export async function getUserAccounts(){
+  try{
+    const { userId } = await auth();
+    if (!userId) {
+      throw new Error("User not authenticated");
+    }
+
+    const user = await db.user.findUnique({
+      where: {
+        clerkUserId: userId,
+      },
+    });
+    if (!user) {
+      throw new Error("User not found in database");
+    }
+
+    const accounts = await db.account.findMany({
+      where:{ userId: user.id},
+      orderBy: {createdAt : "desc"},
+      include:{
+        _count:{
+          select:{
+            transactions: true,
+          },
+        },
+      },
+    });
+
+    const serializedAccount = accounts.map(serializeTransaction);
+    return serializedAccount;
+
+  }catch(error){
+    console.error("Error fetching user accounts:", error);
   }
 }
