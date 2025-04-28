@@ -74,7 +74,7 @@ export function TransactionTable({ transactions }) {
   const [typeFilter, setTypeFilter] = useState("");
   const [recurringFilter, setRecurringFilter] = useState("");
   const [currentPage, setCurrentPage] = useState(1);
-  const router = useRouter();
+  const rout0er = useRouter();
 
   // Memoized filtered and sorted transactions
   const filteredAndSortedTransactions = useMemo(() => {
