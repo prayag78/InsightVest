@@ -29,7 +29,7 @@ import { Loader2 } from "lucide-react";
 import { useEffect } from "react";
 import { toast } from "sonner";
 
-const CreateAccountDrawer = ({ children }) => {
+export const CreateAccountDrawer = ({ children }) => {
   const [open, setOpen] = useState(false);
 
   const {
@@ -56,7 +56,6 @@ const CreateAccountDrawer = ({ children }) => {
     loading: createAccountLoading,
   } = useFetch(createAccount);
 
-
   useEffect(() => {
     if (newAccount) {
       toast.success("Account created successfully");
@@ -70,8 +69,6 @@ const CreateAccountDrawer = ({ children }) => {
       toast.error(error.message || "Failed to create account");
     }
   }, [error]);
-
-  
 
   const onSubmit = async (data) => {
     //console.log("Form data:", data);
@@ -172,7 +169,11 @@ const CreateAccountDrawer = ({ children }) => {
                   Cancel
                 </Button>
               </DrawerClose>
-              <Button type="submit" className="flex-1" disabled={createAccountLoading}>
+              <Button
+                type="submit"
+                className="flex-1"
+                disabled={createAccountLoading}
+              >
                 {createAccountLoading ? (
                   <>
                     <Loader2 className="mr-2 h-4 w-4 animate-spin" />
