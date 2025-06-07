@@ -28,7 +28,7 @@ const Header = async () => {
           />
         </Link>
         <div className="flex items-center space-x-4">
-          <SignedIn>
+          <SignedIn >
             <Link
               href={"/dashboard"}
               className="text-gray-600 hover:text-blue-600 flex items-center gap-2"
@@ -47,11 +47,12 @@ const Header = async () => {
           </SignedIn>
 
           <SignedOut>
-            <SignInButton forceRedirectUrl="/dashboard">
+            <SignInButton forceRedirectUrl="/dashboard" mode="modal">
               <Button variant="outline">Login</Button>
             </SignInButton>
-            {/* <SignUpButton /> */}
+            <SignUpButton mode="modal" />
           </SignedOut>
+
           <ModeToggle />
           <SignedIn>
             <UserButton

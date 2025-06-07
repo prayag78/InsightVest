@@ -125,9 +125,9 @@ export const Lid = ({ scaleX, scaleY, rotate, translate, src }) => {
           }}
           className="absolute inset-0 flex items-center justify-center rounded-lg bg-[#010101]"
         >
-          <span className="text-white">
+          {/* <span className="text-white">
             <AceternityLogo />
-          </span>
+          </span> */}
         </div>
       </div>
       <motion.div
