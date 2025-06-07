@@ -20,8 +20,8 @@ const Header = async () => {
       <nav className="container mx-auto px-4 h-16 flex items-center justify-between">
         <Link href="/">
           <Image
-            src={"/insightvest_logo.png"}
-            alt="logo"
+            src="/icon_img.png"
+            alt="InsightVest Logo"
             height={60}
             width={200}
             className="h-12 w-auto object-contain"

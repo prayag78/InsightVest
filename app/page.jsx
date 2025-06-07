@@ -9,6 +9,7 @@ import {
   testimonialsData,
 } from "@/data/landing";
 import HeroSection from "@/components/hero";
+import { HoverEffect } from "@/components/ui/card-hover-effect";
 import Link from "next/link";
 
 const Home = () => {
@@ -38,8 +39,8 @@ const Home = () => {
           <h2 className="text-3xl font-bold text-center mb-12">
             Everything you need to manage your finances
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {featuresData.map((feature, index) => (
+          <div className="max-w-5xl mx-auto px-8">
+            {/* {featuresData.map((feature, index) => (
               <Card className="p-6" key={index}>
                 <CardContent className="space-y-4 pt-4">
                   {feature.icon}
@@ -47,7 +48,8 @@ const Home = () => {
                   <p className="text-gray-600">{feature.description}</p>
                 </CardContent>
               </Card>
-            ))}
+            ))} */}
+            <HoverEffect items={featuresData} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"/>
           </div>
         </div>
       </section>
