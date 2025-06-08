@@ -318,11 +318,11 @@ export function AddTransactionForm({
       )}
 
       {/* Actions */}
-      <div className="flex gap-4">
+      <div className="">
         <Button
           type="button"
           variant="outline"
-          className="w-full"
+          className="w-full mb-4"
           onClick={() => router.back()}
         >
           Cancel
