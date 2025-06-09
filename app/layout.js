@@ -1,14 +1,17 @@
-import { Raleway } from "next/font/google";
+import { Space_Grotesk } from "next/font/google";
 import { ThemeProvider } from "@/components/theme-provider";
 import "./globals.css";
 import { ClerkProvider } from "@clerk/nextjs";
 import Header from "@/components/header";
 import { Toaster } from "sonner";
+import Footer from "@/components/footer";
 
-const RalewayFont = {
+
+const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
-  weight: "400",
-};
+  variable: "--font-space-grotesk",
+  weight: ["400", "700"],
+});
 
 export const metadata = {
   title: "InsightVest",
@@ -18,23 +21,20 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <ClerkProvider>
-      <html lang="en">
-        <body className={`${RalewayFont.className}`}>
+      <html lang="en" className="dark">
+        <body className={`${spaceGrotesk.className}`}>
           <ThemeProvider
             attribute="class"
-            defaultTheme="system"
-            enableSystem
+            defaultTheme="dark"
+            forcedTheme="dark"
+            enableSystem={false}
             disableTransitionOnChange
           >
             <Header />
             <main className="min-h-screen">{children}</main>
             <Toaster richColors />
 
-            <footer className="bg-muted/50 py-12">
-              <div className="container mx-auto px-4 text-center text-blue-400">
-                <p></p>
-              </div>
-            </footer>
+            <Footer />
           </ThemeProvider>
         </body>
       </html>

@@ -21,6 +21,7 @@ import {
 } from "@/components/ui/select";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { cn } from "@/lib/utils";
+import Bars from "./bars";
 
 const COLORS = [
   "#FF6B6B",
@@ -145,8 +146,8 @@ export function DashboardOverview({ accounts, transactions }) {
       </Card>
 
       {/* Expense Breakdown Card */}
-      <Card>
-        <CardHeader>
+      <div>
+        {/* <CardHeader>
           <CardTitle className="text-base font-normal">
             Monthly Expense Breakdown
           </CardTitle>
@@ -189,8 +190,9 @@ export function DashboardOverview({ accounts, transactions }) {
               </ResponsiveContainer>
             </div>
           )}
-        </CardContent>
-      </Card>
+        </CardContent> */}
+        <Bars />
+      </div>
     </div>
   );
 }

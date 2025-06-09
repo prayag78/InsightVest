@@ -28,18 +28,18 @@ const Header = async () => {
           />
         </Link>
         <div className="flex items-center space-x-4">
-          <SignedIn >
+          <SignedIn>
             <Link
               href={"/dashboard"}
               className="text-gray-600 hover:text-blue-600 flex items-center gap-2"
             >
-              <Button variant="outline">
+              <Button variant="outline" className="cursor-pointer">
                 <LayoutDashboard size={18} />
                 <span className=" hidden md:inline">dashboard</span>
               </Button>
             </Link>
             <Link href={"/transaction/create"}>
-              <Button className="flex items-center gap-2">
+              <Button className="flex items-center gap-2 cursor-pointer">
                 <PenBox size={18} />
                 <span className=" hidden md:inline">Create Transaction</span>
               </Button>
@@ -47,13 +47,11 @@ const Header = async () => {
           </SignedIn>
 
           <SignedOut>
-            <SignInButton forceRedirectUrl="/dashboard" mode="modal">
-              <Button variant="outline">Login</Button>
+            <SignInButton forceRedirectUrl="/dashboard" mode="modal" >
+              <Button variant="outline" className="cursor-pointer">Login</Button>
             </SignInButton>
             <SignUpButton mode="modal" />
           </SignedOut>
-
-          <ModeToggle />
           <SignedIn>
             <UserButton
               appearance={{

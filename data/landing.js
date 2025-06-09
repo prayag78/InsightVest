@@ -1,10 +1,12 @@
-import {
+  import {
     BarChart3,
     Receipt,
-    PieChart,
+    ClipboardList,
+    CalendarCheck2,
+    FolderKanban,
+    Sparkles,
     CreditCard,
-    Globe,
-    Zap,
+    PieChart,
   } from "lucide-react";
   
   // Stats Data
@@ -28,40 +30,47 @@ import {
   ];
   
   // Features Data
+
+  
   export const featuresData = [
     {
-      icon: <BarChart3 className="h-8 w-8 text-blue-600" />,
-      title: "Advanced Analytics",
+      icon: <Receipt className="h-9 w-9 text-emerald-400 drop-shadow" />,
+      title: "AI Receipt Scanning",
       description:
-        "Get detailed insights into your spending patterns with AI-powered analytics",
+        "Snap, scan, and save. Let our AI handle your receipts in seconds — no more manual entry.",
     },
     {
-      icon: <Receipt className="h-8 w-8 text-blue-600" />,
-      title: "Smart Receipt Scanner",
+      icon: <ClipboardList className="h-9 w-9 text-green-300 drop-shadow" />,
+      title: "Clean Transaction Logs",
       description:
-        "Extract data automatically from receipts using advanced AI technology",
+        "Track every spend with crystal-clear records. Filter, search, and stay on top with ease.",
     },
     {
-      icon: <PieChart className="h-8 w-8 text-blue-600" />,
-      title: "Budget Planning",
-      description: "Create and manage budgets with intelligent recommendations",
+      icon: <CalendarCheck2 className="h-9 w-9 text-teal-400 drop-shadow" />,
+      title: "Monthly Financial Reports",
+      description:
+        "Auto-generated summaries every month so you can reflect, review, and refine your money habits.",
     },
     {
-      icon: <CreditCard className="h-8 w-8 text-blue-600" />,
-      title: "Multi-Account Support",
-      description: "Manage multiple accounts and credit cards in one place",
+      icon: <FolderKanban className="h-9 w-9 text-cyan-300 drop-shadow" />,
+      title: "Smart Categorization",
+      description:
+        "Transactions are sorted by context — groceries, rent, travel, or even that midnight snack run.",
     },
     {
-      icon: <Globe className="h-8 w-8 text-blue-600" />,
-      title: "Multi-Currency",
-      description: "Support for multiple currencies with real-time conversion",
+      icon: <BarChart3 className="h-9 w-9 text-sky-400 drop-shadow" />,
+      title: "Visual Insights",
+      description:
+        "Beautiful charts that show you where your money's going. Numbers made understandable.",
     },
     {
-      icon: <Zap className="h-8 w-8 text-blue-600" />,
-      title: "Automated Insights",
-      description: "Get automated financial insights and recommendations",
+      icon: <Sparkles className="h-9 w-9 text-indigo-300 drop-shadow" />,
+      title: "Zero Learning Curve",
+      description:
+        "Just log in and go. It’s built to feel intuitive, clean, and fast for real people like you.",
     },
   ];
+  
   
   // How It Works Data
   export const howItWorksData = [
@@ -88,25 +97,26 @@ import {
   // Testimonials Data
   export const testimonialsData = [
     {
-      name: "Sarah Johnson",
-      role: "Small Business Owner",
-      image: "https://randomuser.me/api/portraits/women/75.jpg",
+      name: "Aarav Mehta",
+      role: "Startup Founder",
+      image: "https://randomuser.me/api/portraits/men/65.jpg",
       quote:
-        "Welth has transformed how I manage my business finances. The AI insights have helped me identify cost-saving opportunities I never knew existed.",
+        "INSIGHTVEST makes tracking business expenses ridiculously easy. AI receipt scanning and monthly breakdowns save me hours every week.",
     },
     {
-      name: "Michael Chen",
-      role: "Freelancer",
-      image: "https://randomuser.me/api/portraits/men/75.jpg",
+      name: "Riya Kapoor",
+      role: "Student & Budget Tracker",
+      image: "https://randomuser.me/api/portraits/women/65.jpg",
       quote:
-        "The receipt scanning feature saves me hours each month. Now I can focus on my work instead of manual data entry and expense tracking.",
+        "I used to forget where my money went. With INSIGHTVEST, I just upload receipts and it auto-generates my monthly report — super helpful!",
     },
     {
-      name: "Emily Rodriguez",
-      role: "Financial Advisor",
-      image: "https://randomuser.me/api/portraits/women/74.jpg",
+      name: "Devansh Patel",
+      role: "Remote Freelancer",
+      image: "https://randomuser.me/api/portraits/men/68.jpg",
       quote:
-        "I recommend Welth to all my clients. The multi-currency support and detailed analytics make it perfect for international investors.",
+        "I love how simple and clean INSIGHTVEST is. No bloated features — just what I need: smart transaction logging and real insights.",
     },
   ];
+  
   
