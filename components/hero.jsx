@@ -89,7 +89,7 @@ const HeroSection = () => {
 
         <div className="hero-image-wrapper mt-10 overflow-hidden bg-[#0B0B0F] w-full">
           <MacbookScroll
-            src="/dashboard.png"
+            src="/image.png"
             showGradient={true}
             title="Dashboard Preview"
             badge="Live"
