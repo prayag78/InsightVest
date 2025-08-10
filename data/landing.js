@@ -99,21 +99,21 @@
     {
       name: "Aarav Mehta",
       role: "Startup Founder",
-      image: "https://randomuser.me/api/portraits/men/65.jpg",
+      image: "/p1.png",
       quote:
         "INSIGHTVEST makes tracking business expenses ridiculously easy. AI receipt scanning and monthly breakdowns save me hours every week.",
     },
     {
       name: "Riya Kapoor",
       role: "Student & Budget Tracker",
-      image: "https://randomuser.me/api/portraits/women/65.jpg",
+      image: "/p2.png",
       quote:
         "I used to forget where my money went. With INSIGHTVEST, I just upload receipts and it auto-generates my monthly report — super helpful!",
     },
     {
-      name: "Devansh Patel",
+      name: "Amelia Clarke",
       role: "Remote Freelancer",
-      image: "https://randomuser.me/api/portraits/men/68.jpg",
+      image: "/p3.png",
       quote:
         "I love how simple and clean INSIGHTVEST is. No bloated features — just what I need: smart transaction logging and real insights.",
     },
